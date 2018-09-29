@@ -3,7 +3,11 @@ var http = require('http');
 var fs = require('fs'); // Using the filesystem module
 var httpServer = http.createServer(requestHandler);
 var url = require('url');
-httpServer.listen(8005);
+
+var port = 8005;
+httpServer.listen(port);
+
+console.log("running on port " + port)
 
 function requestHandler(req, res) {
 
@@ -23,9 +27,4 @@ function requestHandler(req, res) {
 			res.end(data);
   		}
   	);
-
-  	/*
-  	res.writeHead(200);
-  	res.end("Life is wonderful");
-  	*/
 }

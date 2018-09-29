@@ -29,9 +29,7 @@ document.getElementById("ditButton").addEventListener("click", playDitAudio);
 var ditAudio = document.getElementById("dit");
 var dahAudio = document.getElementById("dah");
 
-/////////////////////////
 //ELEPHANT
-/////////////////////////
 function beginLessonElephant() {
   //show the lesson illustration in the lesson div
   if (trainDiv) {
@@ -84,9 +82,7 @@ function beginLessonElephant() {
   }
 }
 
-/////////////////////////
 //TRAIN
-/////////////////////////
 function beginLessonTrain() {
   console.log("train begins");
   //show the lesson illustration in the lesson div
