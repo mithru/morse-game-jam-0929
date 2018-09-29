@@ -118,5 +118,5 @@ const englishToMorse = {
   '@': '•--•-•'
 };
 
-exports.morseToEnglish = morseToEnglish;
-exports.englishToMorse = englishToMorse;
+// exports.morseToEnglish = morseToEnglish;
+// exports.englishToMorse = englishToMorse;

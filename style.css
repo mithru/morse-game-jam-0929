@@ -57,30 +57,6 @@ body
   max-width: 100%;
   max-height: 100%;
 }
-/*
-#elephantCard{
-  margin-top: 145px;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-#trainCard{
-  margin-top: 145px;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-#alienCard{
-  margin-top: 145px;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-#minionCard{
-  margin-top:145px;
-  max-width: 100%;
-  max-height: 100%;
-}*/
 
 #mediaChoices{
     position: relative;
@@ -91,32 +67,6 @@ body
   width: 100%;
   display: none;
 }
-
-/*
-#lessonT{
-    height: inherit;
-      width: 100%;
-    display: none;
-  }
-
-  #lessonE{
-      height: inherit;
-      width: 100%;
-      display: none;
-    }
-
-    #lessonA{
-        height: inherit;
-        width: 100%;
-        display: none;
-      }
-
-      #lessonM{
-          height: inherit;
-            width: 100%;
-          display: none;
-        }
-*/
 
 .morsebuttons{
       background-color: #f7f7f7;
