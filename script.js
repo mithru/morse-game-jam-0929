@@ -8,11 +8,9 @@ letterIndices = ['e','t','a','m'];
 var currLessonID;
 
 var maxTries = 2;
-// import englishToMorse
 
 //if user touches one of the cards
 var trainDiv = document.getElementById('train');
-var modal = document.getElementById('myModal');
 
 // keeps track of what is pressed (sequence of morse chars)
 var answerValue = '';
@@ -31,7 +29,7 @@ for(let id = 0; id < 4; id++){
   });
 }
 
-//Sounds on buttons
+//morse buttons
 document.getElementById("dahButton").addEventListener("click", function(){
   dahAudio.play();
   answerValue = answerValue + "-"
