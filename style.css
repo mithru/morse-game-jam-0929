@@ -122,18 +122,14 @@ body
     outline: none;
     width: 50%;
     padding: 10px;
-
     text-align: center;
     /* background: #CC3F4B; */
-
     /* color: #404040; */
     border: none;
     border-width: 3px;
     /* grid-template-columns: auto auto; */
     background-color: #f7f7f7;
 }
-
-
 
 #ditButton
 {

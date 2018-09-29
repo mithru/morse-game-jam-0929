@@ -2,32 +2,16 @@
 <html>
 
 <head>
-  <script src="p5.min.js"></script>
-  <script src="p5.dom.min.js"></script>
-  <script src="p5.sound.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8" />
 
 </head>
 
 <body>
-
-
-  <!--  Home Page -->
-  <!--  First containing div -->
-  <!--  Second containging div for map  -->
-  <!--  Map has two "Stations" one for . and one for - -->
-
-
-
-  <!--  Lesson Page -->
-  <!--  First div with cards -->
-  <!--  Second div for lesson -->
-  <!--  Third div for morse code library -->
   <div id="yellowbg">
     <!-- Train and cards -->
     <div class="grid-container"  id="train">
-      <button value="11111" class="grid-item" id="maincard" >
+      <button class="grid-item" id="maincard" >
         <img id="maincard" class="cards" src="assets/maincard.png" alt="Full Train">
       </button>
       <button class="grid-item" id="elephantCard">
@@ -80,14 +64,10 @@
     <iframe  width="960" height="400" src="https://www.youtube.com/embed/FsdG6kuYYDI?controls=0&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 
-
-
   <div class="morse-buttons" >
     <input id="pressed" type="hidden" type="text" />
     <button id="ditButton" value="1" class="morse-button" name="submitbutton" >•</button>
     <button id="dahButton" value="2" class="morse-button" name="submitbutton" >‒</button>
-    <!-- <div id="ditButton">•</div> -->
-    <!-- <div id="dahButton">‒</div> -->
   </div>
 
   <audio id="dit">
@@ -99,22 +79,6 @@
     <source src="assets/dah.mp3" type="audio/mp3">
       Your browser does not support the audio element.
   </audio>
-
-
-  <div>
-  </div>
-  <!--  <div id="mediaChoices">
-
-      <div id="card1">
-        <img src="assets/rectangle.jpg" alt="Train" width="500%" height="400%">
-        <p> morse code, symbol, word, or letter </p>
-      </div>
-
-    </div>
-  -->
-
   <script src="script.js"></script>
-
 </body>
-
 </html>
