@@ -1,34 +1,106 @@
+// index reference
+// 0 = elephant
+// 1 = train
+// 2 = alien
+// 3 = minion
+
 //if user touches one of the cards
 var trainDiv = document.getElementById('train');
 var modal = document.getElementById('myModal');
+
+//TODO check if being used
 var span = document.getElementsByClassName("close")[0];
 
-var pressed = '';
+// keeps track of what is pressed (sequence of morse chars)
+var answerValue = '';
 var numberOfTries = 0;
+
+var video = [];
+var lesson = [];
 
 var buttons = document.querySelectorAll('.morse-button'), i;
 
-document.getElementById("card1").addEventListener("click", beginLessonElephant);
-document.getElementById("card2").addEventListener("click", beginLessonTrain);
-document.getElementById("card3").addEventListener("click", beginLessonAlien);
-document.getElementById("card4").addEventListener("click", beginLessonMinion);
+for(let id = 0; id < 4; id++){
+// console.log(i,document.getElementById('card'+i));
+  video[id] = document.getElementById('video'+id);
+  lesson[id] = document.getElementById('lesson'+id);
+  console.log(document.getElementById("card"+id));
+  document.getElementById('card'+id).addEventListener("click", function(){
+    beginLesson(id)
+  });
+}
 
-var alienVideo = document.getElementById('alienVideo');
-var trainVideo = document.getElementById('trainVideo');
-var elephantVideo = document.getElementById('elephantVideo');
-var minionVideo = document.getElementById('minionVideo');
-
-var trainLesson = document.getElementById('lessonT');
-var alienLesson = document.getElementById('lessonA');
-var elephantLesson = document.getElementById('lessonE');
-var minionLesson = document.getElementById('lessonM');
-
-document.getElementById("dahButton").addEventListener("click", playDahAudio);
-document.getElementById("ditButton").addEventListener("click", playDitAudio);
+//Sounds on buttons
+document.getElementById("dahButton").addEventListener("click", function(){
+  dahAudio.play();
+  answerValue = answerValue + "-"
+});
+document.getElementById("ditButton").addEventListener("click", function(){
+  ditAudio.play();
+  answerValue = answerValue + "•"
+});
 
 var ditAudio = document.getElementById("dit");
 var dahAudio = document.getElementById("dah");
 
+function beginLesson(lessonID){
+  answerValue = "";
+  trainDiv.style.display = 'none';
+  document.getElementById('yellowbg').style.background = '#f7f7f7';
+  lesson[lessonID].style.display = 'block';
+
+  /*
+  if (trainDiv.style.display == 'none') {
+    trainDiv.style.display = 'block';
+    lesson[lessonID].style.display = 'none';
+  } else {
+
+  }
+*/
+
+/*
+  //for every morse code button
+  for (i = 0; i < buttons.length; i++) {
+    //add the event listeners for the train lesson
+    //and connect those event listeners to a unique function
+    //that will process whether Ben has entered the right answer
+    buttons[i].addEventListener('click', morseCodeListeners, false);
+  }
+*/
+  //the unique function to test Ben's answer
+  //pass in the user's behavior
+  /*
+  function morseCodeListeners(event) {
+    //store in a hidden input field the user's inputs
+    //to be able to collect a string
+    pressed = document.getElementById('pressed');
+    pressed.value += this.value + "|";
+    //this shows us what Ben has entered
+    console.log(pressed.value)
+
+    // Ben needs to answer dit-dah / 1 2 for the letter A
+
+    // if he enteres dah / 2, he's already wrong
+    if (pressed.value[0] == '2') {
+      // tell him he's wrong
+      // clear the string
+      // ditAudio.pause();
+      pressed.value = ''
+      tryAgain();
+    }
+
+    if (pressed.value[0] == '1') {
+      // alert('yay!')
+      pressed.value = ''
+      //TODO
+      //elephantVideo.style.display = "block";
+      numberOfTries = 0;
+    }
+  }
+  */
+}
+
+/*
 //ELEPHANT
 function beginLessonElephant() {
   //show the lesson illustration in the lesson div
@@ -40,12 +112,10 @@ function beginLessonElephant() {
       trainDiv.style.display = 'none';
       document.getElementById('yellowbg').style.background = '#f7f7f7';
       elephantLesson.style.display = 'block';
-      // elephantLesson.play();
     }
   }
   //for every morse code button
   for (i = 0; i < buttons.length; i++) {
-
     //add the event listeners for the train lesson
     //and connect those event listeners to a unique function
     //that will process whether Ben has entered the right answer
@@ -287,6 +357,9 @@ function beginLessonMinion() {
   }
 
 }
+*/
+
+/*
 
 function reset(){
   console.log("reset!")
@@ -377,7 +450,7 @@ function blinkDahButton(){
     }
   }, 1000);
 }
-
+*/
 function closeVideoModal() {
   modal.style.display = 'none';
   if (modal.style.display == 'none') {
@@ -386,7 +459,7 @@ function closeVideoModal() {
     trainDiv.style.display = 'none';
   }
 }
-
+/*
 function playDitAudio(){
   ditAudio.play();
 }
@@ -394,3 +467,4 @@ function playDitAudio(){
 function playDahAudio(){
   dahAudio.play();
 }
+*/
