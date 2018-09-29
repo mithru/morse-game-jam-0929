@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <style>
+    input {
+      margin: auto;
+      width: 100%;
+    }
+
+    body {
+      background-color: #00CEB0;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="http://198.199.72.139:8005/index.html">
+    <input type="image" id="start" src=" assets/homeScreenAnimation.gif" />
+    <audio>
+  <source id="trainSound" src="BOOBOO.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+<script>
+  var trainSound = document.getElementById("trainSound");
+var start = document.getElementById("start");
+start.addEventListener(onclick,function(){
+  trainSound.play();
+});
+
+</script>
+
+</html>
